@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>map</title>
+    <script src="/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ir7jFwBM0tPkLebXl3ScT9cB">
+    </script>
+
+    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/overlay.css">
+    <script src='js/loadInfo.js'></script>
+    <script src='js/overlay.js'></script>
+</head>
+<body>
+<div class="container clearfloat">
+    <div class="select-cont">
+        <div class="menu clearfloat">
+            <div id="sidebar-filter" class="select">筛选条件</div>
+            <div id="sidebar-hotel">酒店列表</div>
+        </div>
+        <div class="scroll-clip">
+            <div id="list">
+                <ul>
+                    <li>
+                        <span>价格范围</span>
+                        <div>
+                            <input type="checkbox" value="0,200" data-label="price">200以下
+                            <input type="checkbox" value="200,300" data-label="price">200-300
+                            <br/>
+                            <input type="checkbox" value="300,500" data-label="price">300-500
+                            <input type="checkbox" value="500,3000" data-label="price">500以上
+                        </div>
+                    </li>
+                    <li>
+                        <span>酒店级别</span>
+                        <div>
+                            <input type="checkbox" value="1" data-label="type">经济型
+                            <input type="checkbox" value="2" data-label="type">二星级
+                            <br/>
+                            <input type="checkbox" value="3" data-label="type">三星级
+                            <input type="checkbox" value="4" data-label="type">舒适四星级
+                            <br/>
+                            <input type="checkbox" value="5" data-label="type">高档五星级
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div id="hotel">
+                <div class="clearfloat hotel">
+                    <dl>
+                        <dd><img src="{{imgSrc}}"/></dd>
+                        <dt>{{name}}</dt>
+                        <dt>{{address}}</dt>
+                    </dl>
+                    <span class="price">{{price}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="map-cont"></div>
+</div>
+</body>
+</html>
